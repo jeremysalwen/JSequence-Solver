@@ -19,7 +19,7 @@ To build:
 run make from this directory
 
 To run:
-./main 1 0 2 3
+./sequencesolver 1 0 2 3
 
 or whatever sequence you want it to solve other than 1 0 2 3.
 

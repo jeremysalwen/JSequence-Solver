@@ -1,6 +1,6 @@
 CXXFLAGS += -O3
 
-all: main
+all: sequencesolver
 
 clean: 
 	rm -f main
