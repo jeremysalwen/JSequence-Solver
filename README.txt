@@ -2,18 +2,19 @@ This is a simple experimental program I whipped up in a few minutes.
 The basic idea is that it is a universal solver for predicting the next 
 element in a sequence of integers.  
 
-The theory behind it is that you want to find the rule for generating 
-the sequence that has the least Kolmogorov complexity (see Wikipedia for 
-definition).  The types of rules that I look for are brainfuck programs 
-(without input).  Very simply, the shorter programs are considered less 
-complex.  Thus jsequence-solver will find the shortest brainfuck program 
-that will output a given sequence of integers.  From this, you can guess 
-what the next likely output would be, assuming it follows this rule.  
-Theoretically this will solve any sequence.  The time it takes, however, 
-is a different matter... maybe in the future it will be feasible for 
-moderate complexity sequences.  Right now it will only solve very basic 
-ones like 1 2 3 2 3 4.  In fact, getting it to output just the number 12 
-is a struggle.
+The theory behind it is similar to Solomonoff induction (see wikipedia) 
+except that instead of averaging the probabilities over all possible 
+programs, you just find the single most simple rule which will output 
+the given sequence.  The types of rules that I look for are brainfuck 
+programs (without input).  Very simply, the shorter programs are 
+considered less complex.  Thus jsequence-solver will find the shortest 
+brainfuck program that will output a given sequence of integers.  From 
+this, you can guess what the next likely output would be, assuming it 
+follows this rule.  Theoretically this will solve any sequence.  The 
+time it takes, however, is a different matter... maybe in the future it 
+will be feasible for moderate complexity sequences.  Right now it will 
+only solve very basic ones like 1 2 3 2 3 4.  In fact, getting it to 
+output just the number 12 is a struggle.
 
 To build:
 run make from this directory
